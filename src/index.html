@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon-x2.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <title>WeaZard App | Wheather Forecast</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="logo-box">
+                <img src="img/Logo.png" alt="Logo" class="logo-box__img">
+            </div>
+            
+            <div class="search-box">
+                <form class="search-form">
+                    <input type="search" name="Search Box" id="search" class="search-box__field" placeholder="Search for city...">
+                    <svg class="search-box__icon">
+                        <use href="img/sprite-icon.svg#icon-magnifying-glass"></use>
+                    </svg>               
+                </form>
+
+            </div>
+            
+            <div class="author-box">
+                <img src="img/Bashar.png" alt="Author" class="author-box__img">
+            </div>
+        </header>
+        
+        <main class="container">
+            <div class="current-weather">
+                <div class="current-weather__location-box">
+                    <h2 class="current-weather__location-box__location">
+                        <span class="cur-city">London,</span>
+                        <br>
+                        <span class="cur-country">England</span>
+                    </h2>
+                    <div class="current-weather__location-box__date">
+                        <span class="cur-date">May 7, 2021</span>
+                    </div>
+                </div>
+                
+                <div class="current-weather__weather-box">
+                    <div class="current-weather__weather-box__condition">
+                        <svg class="current-weather__weather-box__condition__icon cur-icon">
+                            <use href="img/sprite.svg#rain-night"></use>
+                        </svg>
+                        <p class="current-weather__weather-box__condition__text cur-condition">Rainy</p>
+                    </div>
+                    
+                    <h2 class="current-weather__weather-box__cur-temp cur-temp">
+                        27°C
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="forecast">
+                <div class="forecast__details">
+                    <ul class="forecast__list">
+                        <li class="forecast__item">
+                            Humidity: <span class="cur-humidity">18%</span>
+                        </li>
+                        <li class="forecast__item">
+                            Feels like: <span class="cur-feel-like">25°C</span>
+                        </li>
+                        <li class="forecast__item">
+                            Wind Speed: <span class="cur-wind-speed">18kph</span>
+                        </li>
+                        <li class="forecast__item">
+                            Wind Direction: <span class="cur-wind-dir">East</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="forecast__days-box">
+                    <div class="forecast__day foracast__day-1">
+                        <div class="forecast__date forecast__date-1">Mon</div>
+                        <div class="forecast__temp forecast__temp-1">25°C</div>
+                        <div class="forecast__condition forecast__condition-1">Cloudy</div>
+                    </div>
+                    <div class="forecast__day foracast__day-2">
+                        <div class="forecast__date forecast__date-2">Tue</div>
+                        <div class="forecast__temp forecast__temp-2">25°C</div>
+                        <div class="forecast__condition forecast__condition-2">Sunny</div>
+                    </div>
+                
+                <div class="forecast__day foracast__day-3">
+                    <div class="forecast__date forecast__date-3">Wed</div>
+                    <div class="forecast__temp forecast__temp-3">25°C</div>
+                    <div class="forecast__condition forecast__condition-3">Cloudy</div>
+                </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    Powered by
+                    <a href="#" class="footer__link"> WeatherAPI.com</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">
+                        <svg class="footer__link__icon">
+                            <use xlink:href="img/sprite-icon.svg#icon-github1"></use>
+                        </svg>
+                        <span class="footer__link__text">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

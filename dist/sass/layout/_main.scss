@@ -1,0 +1,142 @@
+.container {
+    width: 70%;
+    background-color: $clr-primary-light-1;
+    padding: 5rem 4rem;
+    border-radius: 1.5rem;
+    border: $border-white;
+    box-shadow: 0 0.5rem 1rem rgba($clr-black, 0.15);
+    display: flex;
+    flex-direction: column;
+    color: $clr-primary-dark;
+}
+
+.current-weather {
+    @include centerFlex(row);
+    justify-content: space-between;
+
+    &__location-box,
+    &__weather-box {
+        flex: 0 0 50%;
+    }
+
+    &__location-box {
+        &__location {
+            font-size: 4.8rem;
+            text-transform: capitalize;
+        }
+
+        &__date {
+            font-size: 2.4rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__weather-box {
+        @include centerFlex(row);
+        justify-content: space-between;
+
+        &__condition {
+            flex: 0 0 50%;
+            text-align: center;
+
+            &__icon {
+                width: 10rem;
+                height: 11.2rem;
+                stroke: $clr-primary-dark;
+            }
+
+            &__text {
+                text-transform: capitalize;
+                font-size: 3.6rem;
+
+            }
+        }
+
+        &__cur-temp {
+            font-size: 7.2rem;
+            text-align: center;
+            flex: 0 0 50%;
+            border-left: $border-blue;
+        }
+    }
+}
+
+
+.forecast {
+    @include centerFlex(row);
+    justify-content: space-between;
+    margin-top: 10rem;
+    
+    &__details,
+    &__days-box{
+        flex: 0 0 50%;
+    }
+
+    // &__details {
+        
+        // }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        &:not(:last-child){
+            margin-bottom: 0.4rem;
+        }
+    }
+    
+    &__days-box {
+        display: flex;
+    }
+    
+    &__day {
+        flex: 0 0 33.3333%;
+        text-align: center;
+        &:not(:last-child) {
+            border-right: $border-blue;
+            box-sizing: content-box;
+        }
+    }
+
+    &__date {
+        font-weight: 600;
+    }
+
+    &__condition {
+        text-transform: uppercase;
+    }
+
+    &__temp {
+        font-size: 2.4rem;
+        font-weight: 900;
+        margin: 1rem 0;
+    }
+}
+.loading {
+    color: transparent;
+    stroke: transparent;
+    border-radius: 0.5rem;
+    border: none;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        to right,
+        rgba($clr-primary-dark, 0.2),
+        $clr-primary-light-1
+    );
+    background-size: 200%;
+    animation: bg-anime 0.7s infinite alternate-reverse;
+}
+
+@keyframes bg-anime {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+}

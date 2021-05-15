@@ -1,0 +1,8 @@
+.wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+    height: 100%;
+
+    @include centerFlex(column);
+    justify-content: unset;
+}

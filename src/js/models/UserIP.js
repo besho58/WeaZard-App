@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiKey = at_pToBWyomMwjUb5syXEnj7srYdeX2D;
+const apiKey = 'at_pToBWyomMwjUb5syXEnj7srYdeX2D';
 
 export default class {
     constructor(){}
@@ -11,6 +11,7 @@ export default class {
         } catch (error) {
             alert(error);
         }
-        this.userCity = IP.location.city;
+        console.log(IP)
+        this.userCity = IP.data.location.city;
     }
 }

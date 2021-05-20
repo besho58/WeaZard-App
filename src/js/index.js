@@ -79,6 +79,13 @@ const userLocation = async () => {
     searchView.renderWeather(state.search.results);
 };
 
+// Since the app is underdeveloping, I prevented the mobile devices from accessing the app
+window.addEventListener('load',()=>{
+    if (window.innerWidth < 900) {
+        document.querySelector('.container').textContent = 'Since the app is underdeveloping, I prevented the mobile devices from accessing the app... I RECOMMEND RELOADING THE PAGE IN DESKTOP MODE';
+    }
+});
+
 elements.searchForm.addEventListener('submit', event => {
     event.preventDefault();
     searchCrtl();

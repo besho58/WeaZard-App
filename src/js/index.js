@@ -51,8 +51,7 @@ const userLocation = async () => {
      */
 
 
-    // 1 - DISPLAY LOADER
-    createLoader();
+    // 1 - LOADER IS ALREADY CREATED
 
     // 2 - FIND USER LOACTION 
     state.userip = new UserIP();

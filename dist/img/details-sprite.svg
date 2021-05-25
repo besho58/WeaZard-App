@@ -1,0 +1,18 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="water-drop">
+    <path fill="none" stroke-width="3" stroke-miterlimit="10" d="M11 41.265C11.052 53.27 20.401 63 32 63s21-9.73 21-21.735C53 25.729 32.035 1 32.035 1S10.931 25.729 11 41.265z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="wind-dir">
+    <circle fill="none" stroke-width="3" stroke-miterlimit="10" cx="32" cy="32" r="30"></circle>
+    <circle fill="none" stroke-width="3" stroke-miterlimit="10" cx="32" cy="32" r="4"></circle>
+    <path fill="none" stroke-width="3" stroke-miterlimit="10" d="M40.485 40.484C45.172 35.798 49 15 49 15s-20.799 3.827-25.485 8.514c-4.687 4.688-4.686 12.285 0 16.971 4.685 4.686 12.284 4.687 16.97-.001z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="wind-gust">
+    <path fill="none" stroke-width="3" stroke-miterlimit="10" d="M44 40a7 7 0 107-7H0m49-14a7 7 0 117 7H0"></path>
+    <path fill="none" stroke-width="3" stroke-miterlimit="10" d="M27 45a5 5 0 105-5H0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="thermometer">
+    <title>thermometer</title>
+    <path d="M13 10.123V1a1 1 0 00-1-1H7.799C7.247 0 7 .447 7 1v9.123A5.383 5.383 0 004.6 14.6a5.4 5.4 0 0010.8 0 5.383 5.383 0 00-2.4-4.477zM10 17.9a3.3 3.3 0 01-3.3-3.3A3.29 3.29 0 019 11.471V4h2v7.471a3.29 3.29 0 012.3 3.129 3.3 3.3 0 01-3.3 3.3z"></path>
+  </symbol>
+</svg>

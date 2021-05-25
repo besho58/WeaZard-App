@@ -2,27 +2,40 @@
     @include centerFlex(row);
     justify-content: space-between;
     width: 100%;
-    height: 10vh;
+    margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .logo-box {
-    width: 10rem;
+    width: 12rem;
     margin-left: 2rem;
+
+    @include respond(phone){
+        width: 6rem;
+    }
 }
 
 .search-box {
     position: relative;
+    flex: 0 0 50%;
+
+    @include respond(phone){
+        flex: 0 0 90%;
+        order: 2;
+        margin: 1rem auto;
+    }
     &__field {
-        height: 4rem;
-        width: 40rem;
-        background-color: $clr-primary-light-1;
-        color: $clr-primary-dark;
+        height: 5rem;
+        width: 100%;
+        background-color: rgba($clr-white, 0.2);
+        box-shadow: 0 0.8rem 2rem rgba($clr-primary-dark, 0.2);
+        backdrop-filter: blur( 1rem );
+        border: 1px solid rgba($clr-white, 0.18);
+        border-radius: 1.5rem;
         padding: 1rem;
-        border-radius: 0.7rem;
-        border: $border-white;
-        box-shadow: 0 0.3rem 0.6rem rgba($clr-black, 0.15);
         position: relative;
         appearance: none;
+
     }
 
     &__field:focus {
@@ -49,13 +62,12 @@
     select:-webkit-autofill:hover,
     select:-webkit-autofill:focus {
         -webkit-text-fill-color: $clr-primary-dark;
-        box-shadow: 0 0 0px 1000px $clr-primary-light-1 inset;
     }
 
 
     &__icon {
         position: absolute;
-        top: 0.5rem;
+        top: 1rem;
         right: 1rem;
         height: 3rem;
         width: 3rem;
@@ -64,7 +76,6 @@
 }
 
 .author-box {
-    height: 2.4rem;
     width: 6.4rem;
     margin-right: 2rem;
 }

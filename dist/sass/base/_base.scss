@@ -7,11 +7,19 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; //1rem == 10px
+
+    @include respond(tab){
+        font-size: 56.25%;
+    }
+    @include respond(phone){
+        font-size: 50%;
+    }
 }
 
 body {
-    background-color: $clr-primary-light-2;
+    background-image: url(../img/bg.svg);
+    background-size: contain;
     height: 100vh;
     font-size: 1.6rem;
     font-family: Overpass;

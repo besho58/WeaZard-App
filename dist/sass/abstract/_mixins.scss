@@ -4,3 +4,17 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin respond($screen) {
+    @if $screen == tab {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+
+    @if $screen == phone {
+        @media (max-width: 700px) {
+            @content;
+        }
+    }
+}

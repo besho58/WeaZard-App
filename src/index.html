@@ -19,7 +19,7 @@
             
             <div class="search-box">
                 <form class="search-form">
-                    <input type="search" name="Search Box" id="search" class="search-box__field" placeholder="Search for city...">
+                    <input type="text" name="Search Box" id="search" class="search-box__field" placeholder="Search for city..." autocomplete="none">
                     <svg class="search-box__icon">
                         <use href="img/sprite-icon.svg#icon-magnifying-glass"></use>
                     </svg>               
@@ -62,17 +62,42 @@
             <div class="forecast">
                 <div class="forecast__details">
                     <ul class="forecast__list">
+
                         <li class="forecast__item">
-                            Humidity: <span class="cur-humidity loading">18%</span>
+                            <div class="forecast__container">
+                                <svg class="forecast__icon">
+                                    <use href="img/details-sprite.svg#water-drop"></use>
+                                </svg>
+                                <span class="cur-humidity loading">18%</span>
+                            </div>
+                            <h3 class="forecast__title">Humidity</h3>
                         </li>
                         <li class="forecast__item">
-                            Feels like: <span class="cur-feel-like loading">25°C</span>
+                            <div class="forecast__container">
+                                <svg class="forecast__icon">
+                                    <use href="img/details-sprite.svg#thermometer"></use>
+                                </svg>
+                                <span class="cur-feel-like loading">25°C</span>
+                            </div>
+                            <h3 class="forecast__title">Feels Like</h3>
                         </li>
                         <li class="forecast__item">
-                            Wind Speed: <span class="cur-wind-speed loading">18kph</span>
+                            <div class="forecast__container">
+                                <svg class="forecast__icon">
+                                    <use href="img/details-sprite.svg#wind-gust"></use>
+                                </svg>
+                                <span class="cur-wind-speed loading">18kph</span>
+                            </div>
+                            <h3 class="forecast__title">W-Speed</h3>
                         </li>
                         <li class="forecast__item">
-                            Wind Direction: <span class="cur-wind-dir loading">East</span>
+                            <div class="forecast__container">
+                                <svg class="forecast__icon">
+                                    <use href="img/details-sprite.svg#wind-dir"></use>
+                                </svg>
+                                <span class="cur-wind-dir loading">SSE</span>
+                            </div>
+                            <h3 class="forecast__title">W-Dir</h3>
                         </li>
                     </ul>
                 </div>
@@ -102,10 +127,10 @@
             <ul class="footer__list">
                 <li class="footer__item">
                     Powered by
-                    <a href="#" class="footer__link"> WeatherAPI.com</a>
+                    <a href="https://www.weatherapi.com/" title="Free Weather API" class="footer__link"> WeatherAPI.com</a>
                 </li>
                 <li class="footer__item">
-                    <a href="#" class="footer__link">
+                    <a href="https://github.com/besho58/WeaZard-App" class="footer__link">
                         <svg class="footer__link__icon">
                             <use xlink:href="img/sprite-icon.svg#icon-github1"></use>
                         </svg>

@@ -116,6 +116,7 @@ body {
   width: 100%;
   border: none;
   color: inherit;
+  border-radius: 1rem;
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
@@ -125,7 +126,8 @@ body {
 }
 
 .search-box__field:focus {
-  outline: none;
+  outline-width: 3px;
+  outline-color: orange;
 }
 
 .search-box__field::-webkit-search-cancel-button {

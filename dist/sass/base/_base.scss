@@ -1,26 +1,26 @@
 *,
 *::after,
 *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%; //1rem == 10px
+  font-size: 62.5%; // 1rem == 10px
 
-    @include respond(tab){
-        font-size: 56.25%;
-    }
-    @include respond(phone){
-        font-size: 50%;
-    }
+  @include respond(tab) {
+    font-size: 56.25%;
+  }
+  @include respond(phone) {
+    font-size: 50%;
+  }
 }
 
 body {
-    background-image: url(../img/bg.svg);
-    background-size: contain;
-    height: 100vh;
-    font-size: 1.6rem;
-    font-family: Overpass;
+  background-color: $clr-primary-light-2;
+  background-size: contain;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Overpass;
 }

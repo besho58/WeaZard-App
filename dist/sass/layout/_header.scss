@@ -1,81 +1,89 @@
 .header {
-    @include centerFlex(row);
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 1rem;
-    flex-wrap: wrap;
+  @include centerFlex(row);
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .logo-box {
-    width: 12rem;
-    margin-left: 2rem;
+  margin-left: 2rem;
 
-    @include respond(phone){
-        width: 6rem;
-    }
+  &__img {
+    height: 2rem;
+  }
+
+  @include respond(phone) {
+    width: 6rem;
+  }
 }
 
 .search-box {
+  position: relative;
+  box-shadow: $shadow-medium;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: $clr-white;
+  flex: 0 0 50%;
+
+  @include respond(phone) {
+    flex: 0 0 90%;
+    order: 2;
+    margin: 1rem auto;
+  }
+  &__field {
+    height: 5rem;
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    padding: 1rem;
     position: relative;
-    flex: 0 0 50%;
+    appearance: none;
+  }
 
-    @include respond(phone){
-        flex: 0 0 90%;
-        order: 2;
-        margin: 1rem auto;
-    }
-    &__field {
-        height: 5rem;
-        width: 100%;
-        background-color: rgba($clr-white, 0.2);
-        box-shadow: 0 0.8rem 2rem rgba($clr-primary-dark, 0.2);
-        backdrop-filter: blur( 1rem );
-        border: 1px solid rgba($clr-white, 0.18);
-        border-radius: 1.5rem;
-        padding: 1rem;
-        position: relative;
-        appearance: none;
+  &__field:focus {
+    outline: none;
+  }
 
-    }
+  &__field::-webkit-search-cancel-button {
+    appearance: none;
+  }
 
-    &__field:focus {
-        outline: none;
-    }
-    
-    &__field::-webkit-search-cancel-button {
-        appearance: none;
-    }
-    
-    &__field::placeholder {
-        font-size: inherit;
-        color: rgba($clr-primary-dark, 0.6);
-    }
+  &__field::placeholder {
+    font-size: inherit;
+    color: rgba($clr-primary-dark, 0.6);
+  }
 
-    /* Change autocomplete styles in WebKit */
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover, 
-    input:-webkit-autofill:focus,
-    textarea:-webkit-autofill,
-    textarea:-webkit-autofill:hover,
-    textarea:-webkit-autofill:focus,
-    select:-webkit-autofill,
-    select:-webkit-autofill:hover,
-    select:-webkit-autofill:focus {
-        -webkit-text-fill-color: $clr-primary-dark;
-    }
+  /* Change autocomplete styles in WebKit */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: $clr-primary-dark;
+  }
 
-
-    &__icon {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        height: 3rem;
-        width: 3rem;
-        fill: rgba($clr-primary-dark, 0.6);
-    }
+  &__icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 3rem;
+    width: 3rem;
+    fill: rgba($clr-primary-dark, 0.6);
+  }
 }
 
 .author-box {
-    width: 6.4rem;
-    margin-right: 2rem;
+  margin-right: 2rem;
+
+  &__img {
+    height: 2rem;
+  }
 }

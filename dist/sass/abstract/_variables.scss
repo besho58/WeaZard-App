@@ -1,10 +1,14 @@
 $clr-primary-dark: #011153;
-$clr-primary-light-1: #F8F8F9;
-$clr-primary-light-2: #F2F3F8;
+$clr-primary-light-1: #f8f8f9;
+$clr-primary-light-2: #f6f6f6;
+$clr-secondary: #38457d;
 
-$clr-blue-shadow: rgba(#38457D, 0.3) ;
+$clr-blue-shadow: rgba(#38457d, 0.3);
 
-$clr-white: #fff;
+$clr-white: #fefefe;
 $clr-black: #000;
+
+$shadow-large: 0 10px 15px -3px rgba($clr-primary-dark, 0.2);
+$shadow-medium: 0 2px 4px rgba($clr-primary-dark, 0.2);
 
 $border-blue: 2px solid rgba($clr-primary-dark, 0.6);

@@ -1,39 +1,39 @@
 .footer {
+  display: flex;
+  margin: 3rem 0;
+  &__list {
+    margin: auto 0;
+    font-size: inherit;
+    list-style: none;
     display: flex;
-    margin: 1rem 0;
-    &__list {
-        margin: auto 0;
-        font-size: inherit;
-        list-style: none;
-        display: flex;
+  }
+
+  &__item {
+    color: rgba($clr-primary-dark, 0.8);
+
+    &:not(:first-child) {
+      padding-left: 1rem;
     }
 
-    &__item {
-        color: rgba($clr-primary-dark, 0.8);
-
-        &:not(:first-child) {
-            padding-left: 1rem;
-        }
-
-        &:not(:last-child) {
-            padding-right: 1rem;
-            border-right: $border-blue;
-        }
+    &:not(:last-child) {
+      padding-right: 1rem;
+      border-right: $border-blue;
     }
+  }
 
-    &__link:link,
-    &__link:visited {
-        color: inherit;
-        text-decoration: underline;
-        font-size: 1.8rem;
-    }
+  &__link:link,
+  &__link:visited {
+    color: $clr-secondary;
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
 
-    &__link {
-        &__icon {
-            height: 1.8rem;
-            width: 1.8rem;
-            fill: currentColor;
-            margin-right: 0.5rem;
-        }
+  &__link {
+    &__icon {
+      height: 1.8rem;
+      width: 1.8rem;
+      fill: currentColor;
+      margin-right: 0.5rem;
     }
+  }
 }

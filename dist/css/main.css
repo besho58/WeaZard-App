@@ -123,6 +123,7 @@ body {
   padding: 1rem;
   position: relative;
   appearance: none;
+  transition: ouline-width 0.15s ease-in-out;
 }
 
 .search-box__field:focus {

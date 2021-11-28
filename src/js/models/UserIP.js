@@ -9,9 +9,19 @@ export default class {
     try {
       IP = await axios(`https://geo.ipify.org/api/v1?apiKey=${apiKey}`);
     } catch (error) {
-      console.log(error);
+      document.getElementById(
+        "container"
+      ).innerHTML = `${error} <br /> Check your connection and reload or go to <a
+              href="https://github.com/besho58/WeaZard-App"
+              title="WeaZard App Github"
+              class="footer__link"
+            >
+              <span class="footer__link__text">WeaZard's GitHub</span>
+              <svg class="footer__link__icon">
+                <use xlink:href="img/sprite-icon.svg#icon-github1"></use>
+              </svg>
+            </a> and contact me.`;
     }
-    console.log(IP);
     this.userCity = IP.data.location.city;
   }
 }

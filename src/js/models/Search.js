@@ -13,9 +13,19 @@ export default class Search {
         `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${this.query}&days=5&aqi=no&alerts=no`
       );
       this.results = res.data;
-      console.log(this.results);
     } catch (error) {
-      console.log(error);
+      document.getElementById(
+        "container"
+      ).innerHTML = `${error} <br /> Check your connection and reload or go to <a
+              href="https://github.com/besho58/WeaZard-App"
+              title="WeaZard App Github"
+              class="footer__link"
+            >
+              <span class="footer__link__text">WeaZard's GitHub</span>
+              <svg class="footer__link__icon">
+                <use xlink:href="img/sprite-icon.svg#icon-github1"></use>
+              </svg>
+            </a> and contact me.`;
     }
   }
 }

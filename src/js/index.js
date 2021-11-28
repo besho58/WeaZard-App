@@ -13,7 +13,7 @@ const searchCrtl = async () => {
   //1:  GET THE USER INPUT
 
   const query = searchView.getInput();
-  console.log(`Loading ${query}...`);
+  `Loading ${query}...`;
 
   if (query) {
     // 2:   CREATE LOADER
@@ -28,7 +28,18 @@ const searchCrtl = async () => {
     try {
       await state.search.getResults();
     } catch (error) {
-      console.log(error);
+      document.getElementById(
+        "container"
+      ).innerHTML = `${error} <br /> Check your connection and reload or go to <a
+              href="https://github.com/besho58/WeaZard-App"
+              title="WeaZard App Github"
+              class="footer__link"
+            >
+              <span class="footer__link__text">WeaZard's GitHub</span>
+              <svg class="footer__link__icon">
+                <use xlink:href="img/sprite-icon.svg#icon-github1"></use>
+              </svg>
+            </a> and contact me.`;
     }
 
     // 5:   REMOVE LOADER
@@ -56,7 +67,9 @@ const userLocation = async () => {
   try {
     await state.userip.findIP();
   } catch (error) {
-    console.log(error);
+    document.getElementById(
+      "container"
+    ).innerHTML = `${error} \n check your connection and reload or go to github and contact me`;
   }
 
   // 3 - PASS USER LOCATION TO THE SEARCH
@@ -66,7 +79,9 @@ const userLocation = async () => {
   try {
     await state.search.getResults();
   } catch (error) {
-    console.log(error);
+    document.getElementById(
+      "container"
+    ).innerHTML = `${error} \n check your connection and reload or go to github and contact me`;
   }
 
   // 5 - REMOVE THE LOADER
@@ -79,7 +94,6 @@ const userLocation = async () => {
 elements.searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   searchCrtl();
-  console.log("submit");
 });
 
 window.addEventListener("load", userLocation);
